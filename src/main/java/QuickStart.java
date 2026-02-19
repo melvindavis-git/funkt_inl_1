@@ -30,15 +30,20 @@ public class QuickStart {
                 movieList.add(Movie.fromDocument(doc));
             }
 
-            for (Movie m : movieList) {
-                System.out.println(m);
-            }
+            //f.printAllMovies(movieList);
 
-            System.out.println(f.countMovies(movieList));
-            System.out.println(f.longestMovie(movieList));
-            System.out.println(f.countUniqueGenres(movieList));
-            System.out.println(f.actorsInHighestRatedMovie(movieList));
-
+            System.out.println("Amount of movies made in 1975: " + f.countMovies(movieList));
+            System.out.println("Length of the longest movie: " + f.longestMovie(movieList));
+            System.out.println("Amount of unique genres: " + f.countUniqueGenres(movieList));
+            System.out.println("Actors in the highest imdb-rated movie: " + f.actorsInHighestRatedMovie(movieList));
+            System.out.println("Title of the movie with the least actors: " + f.leastActors(movieList));
+            System.out.println("Amount of actors that participated in more than one movie: " +
+                    f.actorsInMultipleMovies(movieList));
+            System.out.println("The name of the actor that participated in the most movies: " +
+                    f.actorInMostMovies(movieList));
+            System.out.println("Amount of unique languages: " + f.countUniqueLang(movieList));
+            System.out.println("There is at least one movie title that appears in more than one movie: " +
+                    f.duplicateTitles(movieList));
 
         }
     }
