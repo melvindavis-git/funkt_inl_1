@@ -6,6 +6,11 @@ import java.util.stream.Collectors;
 
 public class Functions {
 
+    public long countUnique(List<Movie> ml, MovieSearchInterface msi) {
+        return ml.stream().flatMap(m -> msi.search(m)
+                .stream()).distinct().count();
+    }
+
     public long countMovies(List<Movie> ml) {
         return ml.stream().count();
     }
